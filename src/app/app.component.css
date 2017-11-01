@@ -1,0 +1,136 @@
+html, body {
+	height: 100%;
+	padding: 0; margin: 0;
+}
+
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+.main-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  height: 100vh;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  flex-direction:row;
+  
+  /*-webkit-flex-flow: row wrap;
+  justify-content: space-around;*/
+}
+
+.sideMenu {
+	width: 10%; height: 100%;
+	background-color: #21374B;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content_area {
+	width: 90%; 
+	background-color: #FFFFFF;
+	padding: 0px;
+	height: 100%;
+	overflow: auto;
+}
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width : 321px) {
+	
+	
+}
+ 
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+	
+	
+	
+}
+
+/* --- Extra small devices portrait phones, less than 544px --- */
+@media (max-width: 543px) {
+	.main-container {
+		flex-direction: column;
+	}
+	
+	.sideMenu {
+		width: 100%;
+		background-color: #21374B;
+		height: 40px;
+	}
+
+	.content_area {
+		width: 100%;
+		background-color: #586473;
+		min-height: 400px;
+	}
+	
+}
+
+/* --- Small devices (landscape phones, 544px and up) --- */
+@media (min-width: 544px) and (max-width: 767px) {
+	.main-container {
+		flex-direction: column;
+
+	}
+	
+	.sideMenu {
+		width: 100%;
+		background-color: blue;
+		height: 40px;
+	}
+
+	.content_area {
+		width: 100%;
+		background-color: green;
+		min-height: 400px;
+	}
+}
+
+
+/* --- Medium devices (tablets, 768px and up) --- */
+@media (min-width: 768px) and (max-width: 991px) {
+	 
+	
+	
+}
+  
+ 
+/* --- Large devices (desktops, 992px and up) --- */
+@media (min-width: 992px) and (max-width: 1199px) { 
+	
+	
+	
+	
+}
+
+/* --- Large devices (desktops, 1200px to 1475px) --- */
+@media (min-width: 1200px) and (max-width: 1575px) { 
+	
+	
+}
+ 
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait)
+{
+	
+}
