@@ -7,12 +7,14 @@
 		<nav> 
 			<ul>
 				<li><a routerLink="/main">Main</a></li>
-				<li><a href="">Buy / Sell bitcoins</a></li>
-				<li><a routerLink="/digitalwallet">Digital Wallet</a></li>
-				<li><a href="">Jobs</a></li>
-				<li><a href="">Startups</a></li>
-				<li><a href="">Ethereum</a></li>
-				<li><a href="">News</a></li>
+				<li><a routerLink="/buy-sell">Buy / Sell bitcoins</a></li>
+				<li><a routerLink="/digital-wallet">Digital Wallet</a></li>
+				<li><a routerLink="/jobs">Jobs</a></li>
+				<li><a routerLink="/digital-coins">Digital Coins list</a></li>
+				<li><a routerLink="/startups">Startups</a></li>
+				<li><a routerLink="/ethereum">Ethereum</a></li>
+				<li><a routerLink="/news">News</a></li>
+				<li><a routerLink="/buy-with-digital-coin">Buy with Digital Coins</a></li>
 			</ul>
 		</nav>
 		
@@ -20,10 +22,15 @@
 	
 	<div class="content_area">
 		<div class="container-fluid" style="background-color: #F4E5D4;">
-			<h1>{{title}}</h1>
-			<br />
+			<div class="row">
+				<div class="col-xl-12">
+					<h1>{{title}}</h1>
+				</div>
+			</div>
+
 			 <router-outlet></router-outlet>		
 		</div>
 	</div><!-- content_area -->
 	
 </div><!-- main-container -->
+
