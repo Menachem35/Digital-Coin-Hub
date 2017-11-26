@@ -10,13 +10,14 @@ import { DigitalCoinHubService } from '../digital-coin-hub.service';
 })
 export class MiningComponent implements OnInit {
 
-  constructor(private miningService: DigitalCoinHubService) { }
+  constructor(private appLinksService: DigitalCoinHubService) { }
   
   title = "Mining";
   
   links: DCHlinks[]; // create a new array in type of DCHlinks to get the data
+  
   getLinks(): void {
-	  this.links = this.miningService.getLinks(); // the array above , gets the array with the data 
+	  this.links = this.appLinksService.getLinksByCategory('mining'); // the array above (links), gets the array with the data from the service
   }
   
   ngOnInit() {
