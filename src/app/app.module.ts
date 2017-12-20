@@ -1,19 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'; // import the HTTP library to make our API calls
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { DigitalCoinHubService } from './digital-coin-hub.service';
+import { DataDisplayFromAPI } from './data-display-from-api.service';
+
 import { AppComponent } from './app.component';
-import { MainViewComponent } from './main-view.component';
-import { BuySellBitcoinComponent } from './buy-sell.component';
-import { DigitalWalletComponent } from './digital-wallet.component';
-import { JobsComponent } from './jobs.component';
-import { DigitalCoinsComponent } from './digital-coins.component';
-import { StartupsComponent } from './startups.component';
-import { EthereumComponent } from './ethereum.component';
-import { NewsComponent } from './news.component';
-import { BuyWithDigitalCoinComponent } from './buy-with.component';
-import { BannerWideComponent } from './banner-wide.component';
+import { MainViewComponent } from './main-view/main-view.component';
+import { BuySellBitcoinComponent } from './buy-sell/buy-sell.component';
+import { DigitalWalletComponent } from './digital-wallet/digital-wallet.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { DigitalCoinsComponent } from './digital-coins/digital-coins.component';
+import { MiningComponent } from './mining/mining.component';
+import { StartupsComponent } from './startups/startups.component';
+import { EthereumComponent } from './ethereum/ethereum.component';
+import { NewsComponent } from './news/news.component';
+import { BuyWithDigitalCoinComponent } from './buy-with/buy-with.component';
+import { BannerWideComponent } from './banner-wide/banner-wide.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +28,7 @@ import { BannerWideComponent } from './banner-wide.component';
 	DigitalWalletComponent,
 	JobsComponent,
 	DigitalCoinsComponent,
+	MiningComponent,
 	StartupsComponent,
 	EthereumComponent,
 	NewsComponent, 
@@ -32,8 +38,9 @@ import { BannerWideComponent } from './banner-wide.component';
   imports: [
     BrowserModule,
 	AppRoutingModule,
+	HttpClientModule,
   ],
-  providers: [],
+  providers: [DigitalCoinHubService, DataDisplayFromAPI],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
